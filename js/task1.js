@@ -29,8 +29,8 @@ function calculate() {
   }
 
   // Calculate square, cube, and factorial
-  const squared = number ** 2;
-  const cubed = number ** 3;
+  const squared = Math.pow(number, 2);
+  const cubed = Math.pow(number, 3);
   const factorial = calculateFactorial(number);
 
   // Set the results in the respective fields
@@ -43,7 +43,7 @@ function calculate() {
 
 function init() {
   // Set up the event listener for the form submission
-  const form = document.forms['theForm'];
+  const form = document.forms.theForm;
   form.onsubmit = calculate;
 }
 
