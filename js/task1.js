@@ -41,4 +41,11 @@ function calculate() {
   return false; // Prevent form submission (page reload)
 }
 
-function init() {} // End of init() function.
+function init() {
+  // Set up the event listener for the form submission
+  const form = document.forms['theForm'];
+  form.onsubmit = calculate;
+}
+
+// Initialize the script when the window loads
+window.onload = init;
